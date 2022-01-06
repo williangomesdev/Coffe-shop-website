@@ -9,8 +9,19 @@ document.querySelector("#close-login-form").onclick = () => {
   loginForm.classList.remove("active");
 };
 
+//Menu mobile active
+let menu = document.querySelector("#menu-btn");
+let navbar = document.querySelector(".header .nav");
+menu.onclick = () => {
+  menu.classList.toggle("fa-times");
+  navbar.classList.toggle("active");
+};
+
+//Header transform
 window.onscroll = () => {
   loginForm.classList.remove("active");
+  menu.classList.remove("fa-times");
+  navbar.classList.remove("active");
 
   if (window.scrollY > 0) {
     document.querySelector(".header").classList.add("active");

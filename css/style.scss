@@ -84,7 +84,7 @@ section {
 .header {
   z-index: 1000;
   padding: 4rem 0;
-  transition: .5s;
+  transition: 0.5s;
 
   &.active {
     padding: 2rem 0;
@@ -94,6 +94,7 @@ section {
   .logo {
     font-size: 2.5rem;
     color: $white;
+    font-weight: bolder;
   }
 
   .nav {
@@ -224,7 +225,92 @@ section {
 }
 
 .home {
-  background: url(../images/home-bg.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/home-bg.jpg), no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+
+  span {
+    font-size: 2.5rem;
+    color: $white;
+  }
+
+  h3 {
+    padding-top: 1rem 0;
+    font-size: 5.5rem;
+    color: $white;
+  }
+
+  .link-btn {
+    color: $white;
+    border-color: $white;
+  }
+}
+
+//media queries
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+    scroll-padding-top: 8rem;
+  }
+
+  .home h3 {
+    font-size: 4rem;
+  }
+
+  section {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-form form {
+    padding: 3rem 2rem;
+
+    h3 {
+      font-size: 1.7rem;
+    }
+  }
+  .header {
+    padding: 4rem 2rem;
+
+    &.active {
+      padding: 2rem;
+    }
+
+    #menu-btn {
+      display: inline-block;
+      transition: 0.2s;
+
+      &.fa-times {
+        transform: rotate(180deg);
+      }
+    }
+
+    .nav {
+      position: absolute;
+      top: 99%;
+      left: 0;
+      right: 0;
+      background: $white;
+      flex-flow: column;
+      padding: 1rem 0;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      transition: 0.5s;
+
+      &.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+
+      a {
+        margin: 1rem 2rem;
+        color: $black;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
 }

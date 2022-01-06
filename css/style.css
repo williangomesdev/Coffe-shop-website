@@ -69,6 +69,7 @@ section {
 .header .logo {
   font-size: 2.5rem;
   color: #fff;
+  font-weight: bolder;
 }
 .header .nav a {
   font-size: 2rem;
@@ -186,7 +187,78 @@ section {
 }
 
 .home {
-  background: url(../images/home-bg.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/home-bg.jpg), no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+}
+.home span {
+  font-size: 2.5rem;
+  color: #fff;
+}
+.home h3 {
+  padding-top: 1rem 0;
+  font-size: 5.5rem;
+  color: #fff;
+}
+.home .link-btn {
+  color: #fff;
+  border-color: #fff;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+    scroll-padding-top: 8rem;
+  }
+
+  .home h3 {
+    font-size: 4rem;
+  }
+
+  section {
+    padding: 3rem 0;
+  }
+}
+@media (max-width: 768px) {
+  .login-form form {
+    padding: 3rem 2rem;
+  }
+  .login-form form h3 {
+    font-size: 1.7rem;
+  }
+
+  .header {
+    padding: 4rem 2rem;
+  }
+  .header.active {
+    padding: 2rem;
+  }
+  .header #menu-btn {
+    display: inline-block;
+    transition: 0.2s;
+  }
+  .header #menu-btn.fa-times {
+    transform: rotate(180deg);
+  }
+  .header .nav {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-flow: column;
+    padding: 1rem 0;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: 0.5s;
+  }
+  .header .nav.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .nav a {
+    margin: 1rem 2rem;
+    color: #222;
+  }
 }/*# sourceMappingURL=style.css.map */
