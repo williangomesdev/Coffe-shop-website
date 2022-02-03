@@ -206,6 +206,46 @@ section {
   border-color: #fff;
 }
 
+.about span {
+  font-size: 2.5rem;
+  color: #512a10;
+}
+.about .title {
+  padding-top: 1rem;
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: #222;
+}
+.about p {
+  padding: 1rem 0;
+  font-size: 1.6rem;
+  line-height: 2;
+  color: #666;
+  margin-bottom: 0;
+}
+.about .icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  gap: 1.5rem;
+}
+.about .icons-container .icons {
+  padding: 2rem;
+  background: #eee;
+  text-align: center;
+  flex: 1 1 14rem;
+}
+.about .icons-container .icons i {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  color: #512a10;
+}
+.about .icons-container .icons h3 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #222;
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -260,5 +300,10 @@ section {
   .header .nav a {
     margin: 1rem 2rem;
     color: #222;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
   }
 }/*# sourceMappingURL=style.css.map */
