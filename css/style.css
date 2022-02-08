@@ -383,6 +383,73 @@ section {
   color: #512a10;
 }
 
+.contact .contact-info-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+.contact .contact-info-container .box {
+  border: 0.1rem solid #512a10;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.contact .contact-info-container .box:hover i {
+  background: #512a10;
+  color: #fff;
+}
+.contact .contact-info-container .box i {
+  height: 6rem;
+  width: 6rem;
+  line-height: 6rem;
+  border: 0.1rem solid #512a10;
+  color: #512a10;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.contact .contact-info-container .box h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #222;
+  padding: 1rem 0;
+}
+.contact .contact-info-container .box p {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #666;
+  margin-bottom: 0;
+}
+.contact .container .form h3 {
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: #222;
+  padding-bottom: 1rem;
+}
+.contact .container .form .box {
+  margin: 0.7rem 0;
+  border: 0.1rem solid #512a10;
+  font-size: 1.6rem;
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+}
+.contact .container .form .box:focus {
+  background: #512a10;
+  color: #fff;
+}
+.contact .container .form .box:focus::-moz-placeholder {
+  color: #eee;
+}
+.contact .container .form .box:focus:-ms-input-placeholder {
+  color: #eee;
+}
+.contact .container .form .box:focus::placeholder {
+  color: #eee;
+}
+.contact .container .form textarea {
+  height: 15rem;
+  resize: none;
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -437,6 +504,10 @@ section {
   .header .nav a {
     margin: 1rem 2rem;
     color: #222;
+  }
+
+  .contact .map {
+    height: 25rem;
   }
 }
 @media (max-width: 450px) {
