@@ -20,6 +20,7 @@ $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 @mixin grid($val) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+  gap: 2rem;
 }
 
 @mixin title-text($titleSize) {
@@ -330,7 +331,6 @@ section {
 .gallery {
   .box-container {
     @include grid(30rem);
-    gap: 2rem;
 
     .box {
       overflow: hidden;
@@ -431,7 +431,6 @@ section {
   .contact-info-container {
     @include grid(30rem);
     margin-bottom: 3rem;
-    gap: 2rem;
 
     .box {
       border: $border;
@@ -462,8 +461,10 @@ section {
       }
     }
   }
-  .container {
-    .form{
+  .containerMap {
+    display: flex;
+
+    .form {
       h3 {
         @include title-text(3rem);
         padding-bottom: 1rem;
@@ -489,6 +490,66 @@ section {
       textarea {
         height: 15rem;
         resize: none;
+      }
+    }
+  }
+}
+
+.blogs {
+  background: $light-bg;
+  .box-container {
+    @include grid(30rem);
+
+    .box {
+      &:hover {
+        box-shadow: $box-shadow;
+        background: $white;
+
+        .image {
+          padding: 2rem;
+        }
+
+        .icons {
+          border-top: $border;
+        }
+      }
+
+      .image {
+        height: 25rem;
+        overflow: hidden;
+        background-size: cover;
+      }
+    }
+
+    .content {
+      padding: 2rem;
+      text-align: center;
+
+      h3 {
+        @include title-text(2rem);
+      }
+
+      p {
+        @include graph-text(1.5rem);
+        padding: 1rem 0;
+      }
+    }
+
+    .icons {
+      padding: 1.7rem;
+      background: $white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1rem;
+
+      span {
+        @include title-text(1.4rem);
+
+        i {
+          padding: 0.5rem;
+          color: $main-color;
+        }
       }
     }
   }
@@ -558,6 +619,14 @@ section {
 
   .contact .map {
     height: 25rem;
+  }
+
+  .contact .containerMap {
+    flex-direction: column;
+  }
+
+  .contact .col-md-6 {
+    max-width: 100%;
   }
 }
 
