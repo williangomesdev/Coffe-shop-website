@@ -591,6 +591,44 @@ section {
     }
   }
 }
+
+.footer {
+  text-align: center;
+
+  .logo {
+    font-size: 2.5rem;
+    color: $main-color;
+    font-weight: bolder;
+  }
+
+  .credit {
+    margin: 1rem 0;
+    @include title-text(2rem);
+
+    span {
+      text-decoration: underline;
+    }
+  }
+
+  .share {
+    margin-top: 3rem;
+
+    a {
+      height: 5rem;
+      width: 5rem;
+      line-height: 5rem;
+      font-size: 2rem;
+      border: $border;
+      color: $main-color;
+      margin: 0 0.3rem;
+
+      &:hover {
+        background: $main-color;
+        color: $white;
+      }
+    }
+  }
+}
 //media queries
 
 @media (max-width: 991px) {

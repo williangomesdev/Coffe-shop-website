@@ -545,6 +545,40 @@ section {
   margin-top: 0;
 }
 
+.footer {
+  text-align: center;
+}
+.footer .logo {
+  font-size: 2.5rem;
+  color: #512a10;
+  font-weight: bolder;
+}
+.footer .credit {
+  margin: 1rem 0;
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: #222;
+}
+.footer .credit span {
+  text-decoration: underline;
+}
+.footer .share {
+  margin-top: 3rem;
+}
+.footer .share a {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  border: 0.1rem solid #512a10;
+  color: #512a10;
+  margin: 0 0.3rem;
+}
+.footer .share a:hover {
+  background: #512a10;
+  color: #fff;
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
