@@ -512,6 +512,39 @@ section {
   color: #512a10;
 }
 
+.newsletter {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/newsletter-bg.jpg), no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+.newsletter h3 {
+  font-size: 4rem;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.newsletter p {
+  padding: 1rem 0;
+  font-size: 2rem;
+  color: #fff;
+}
+.newsletter form {
+  margin: 1rem auto;
+  max-width: 60rem;
+  background: #fff;
+  display: flex;
+  padding: 1rem;
+}
+.newsletter form .email {
+  width: 100%;
+  padding: 0 1.4rem;
+  font-size: 1.6rem;
+}
+.newsletter form .link-btn {
+  margin-top: 0;
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
